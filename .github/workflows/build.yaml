@@ -2,8 +2,8 @@ name: Build docker image
 
 on:
   push:
-    branches:
-      - master
+    tags:
+      - '*'
 
 jobs:
   build:
