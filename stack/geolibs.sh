@@ -28,7 +28,7 @@ cd /tmp
 wget http://download.osgeo.org/proj/proj-${PROJ_VERSION}.tar.gz
 wget http://download.osgeo.org/proj/proj-datumgrid-${PROJ_DATUMGRID_VERSION}.tar.gz
 tar xzf proj-${PROJ_VERSION}.tar.gz
-cd proj-${PROJ_VERSION}/nad
+cd proj-${PROJ_VERSION}/data
 tar xzf ../../proj-datumgrid-${PROJ_DATUMGRID_VERSION}.tar.gz
 cd ..
 ./configure --enable-silent-rules
