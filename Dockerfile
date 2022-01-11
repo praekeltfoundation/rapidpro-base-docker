@@ -10,8 +10,6 @@ RUN set -ex \
                 musl-dev \
                 linux-headers \
                 binutils \
-                proj-dev \
-                gdal \
         && sh /geolibs.sh \
         && apk del .build-deps
 
