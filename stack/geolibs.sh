@@ -7,7 +7,7 @@ set -e # fail on any error
 # ===================================================================
 GEOS_VERSION=3.8.0
 
-apk add --no-cache proj-dev gdal
+apk add --no-cache proj-dev gdal-dev
 
 # Install geos
 # ===================================================================
