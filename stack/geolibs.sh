@@ -5,9 +5,9 @@ set -e # fail on any error
 
 # Versions
 # ===================================================================
-GEOS_VERSION=3.4.3
-PROJ_VERSION=4.9.3
-PROJ_DATUMGRID_VERSION=1.5
+GEOS_VERSION=3.8.0
+PROJ_VERSION=6.3.1
+PROJ_DATUMGRID_VERSION=1.8
 GDAL_VERSION=3.0.4
 
 
