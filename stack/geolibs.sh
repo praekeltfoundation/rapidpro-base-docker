@@ -8,7 +8,7 @@ set -e # fail on any error
 GEOS_VERSION=3.4.3
 PROJ_VERSION=4.9.3
 PROJ_DATUMGRID_VERSION=1.5
-GDAL_VERSION=1.11.5
+GDAL_VERSION=3.0.4
 
 
 # Install geos
