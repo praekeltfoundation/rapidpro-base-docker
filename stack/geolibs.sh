@@ -6,9 +6,6 @@ set -e # fail on any error
 # Versions
 # ===================================================================
 GEOS_VERSION=3.8.0
-PROJ_VERSION=6.3.1
-PROJ_DATUMGRID_VERSION=1.8
-GDAL_VERSION=3.0.4
 
 
 # Install geos
@@ -20,32 +17,6 @@ cd geos-${GEOS_VERSION}
 ./configure --enable-silent-rules CFLAGS="-D__sun -D__GNUC__"  CXXFLAGS="-D__GNUC___ -D__sun"
 make -s
 make -s install
-
-
-# Install proj
-# ===================================================================
-cd /tmp
-wget http://download.osgeo.org/proj/proj-${PROJ_VERSION}.tar.gz
-wget http://download.osgeo.org/proj/proj-datumgrid-${PROJ_DATUMGRID_VERSION}.tar.gz
-tar xzf proj-${PROJ_VERSION}.tar.gz
-cd proj-${PROJ_VERSION}/data
-tar xzf ../../proj-datumgrid-${PROJ_DATUMGRID_VERSION}.tar.gz
-cd ..
-./configure --enable-silent-rules
-make -s
-make -s install
-
-
-# Install gdal
-# ===================================================================
-cd /tmp
-wget http://download.osgeo.org/gdal/${GDAL_VERSION}/gdal-${GDAL_VERSION}.tar.gz
-tar xzf gdal-${GDAL_VERSION}.tar.gz
-cd gdal-${GDAL_VERSION}
-./configure --enable-silent-rules --with-static-proj4=/usr/local/lib
-make -s
-make -s install
-
 
 # Clean up
 # ===================================================================
