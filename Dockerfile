@@ -1,6 +1,5 @@
 FROM python:3.9-alpine
 
-COPY stack/geolibs.sh /
 RUN set -ex \
         && apk add --no-cache --virtual .build-deps \
                 gcc \
@@ -10,7 +9,10 @@ RUN set -ex \
                 musl-dev \
                 linux-headers \
                 binutils \
-        && sh /geolibs.sh \
+        && apk add --no-cache --virtual \
+                proj-dev \
+                gdal-dev \
+                geos-dev \
         && apk del .build-deps
 
 CMD ["python3"]
